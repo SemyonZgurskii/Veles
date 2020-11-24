@@ -1,0 +1,9 @@
+mixin ArticleCard(data, size)
+  - const {title, imageUrl} = data;
+  - const imgWidth = size === "big" ? "320" : "288";
+  - const imgHeight = size === "big" ? "176" : "146";
+  - const modifier = size === "big" ? "article-card--big" : "";
+  div.article-card(class=modifier)
+    img.article-card__image(src=imageUrl, width=imgWidth, height=imgHeight)
+    h3.article-card__title= title
+    a.article-card__link смотреть

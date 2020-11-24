@@ -1,0 +1,58 @@
+extends ../../templates/index-page
+
+block variables
+  - const PAGE_TITLE = "Новости культуры";
+
+  include ../../mock
+
+  include ../site-navigation/site-navigation
+  include ../news/news
+  include ../news-list/news-list
+  include ../reviews-list/reviews-list
+  include ../pagination
+  include ../article-card
+  include ../dot-pagination
+  include ../events
+
+block links
+  link(rel="stylesheet", href="style.css")
+
+block header
+  header.main-header.main-header--menu-closed
+    button.main-header__menu-button(type="button")
+    +SiteNavigation(siteNavigationData)(class="main-header__navigation")
+block content
+  main.main-content
+    section.slider
+      img.slider__image(src="../images/slider-mobile.jpg")
+      strong.slider__status= "новое"
+      h2.slider__title= "подводный отель"
+      div.slider__desktop-controls
+        button.slider__button-back= "Предыдущая"
+        button.slider__arrow-button-back
+        button.slider__arrow-button-next
+        button.slider__button-next= "Следущая"
+      p.slider__description= "Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти"
+      +DotPagination(sliderPaginationData, "white")
+    div.content
+      div.content__left-column
+        section.news.container
+          h2.news__title новости
+          div.news__content-wrapper
+            +BigNewsCard(bigNewsCardData)(class="news__main")
+            +NewsList(newsListData)(class="news__list")
+        section.reviews.container
+          h2.reviews__title обзоры
+          +ReviewsList(reviewsData)(class="reviews__item")
+          +Pagination(paginationData)(class="reviews__pagination")
+        section.articles
+          h2.visually-hidden статьи
+          div.articles__main-article
+            +ArticleCard(articlesMainCard, "big")
+          ul.articles__list
+            each articleCardData in articleCardsData
+              li.articles__item
+                +ArticleCard(articleCardData)
+          +DotPagination(reviewsPaginationData)
+      div.content__right-column
+        +Events(eventsData)

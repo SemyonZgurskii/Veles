@@ -1,0 +1,13 @@
+mixin DotPagination(data, color)
+  - const modifier = color === "white" ? "dot-pagination--white" : "";
+  - const {dotsCount, inputName} = data;
+  ul.dot-pagination(class=modifier)
+    - for(let i = 0; i < dotsCount; i++)
+        - const inputId = inputName + "-" + (i + 1);
+        li.dot-pagination__item
+          input.dot-pagination__input.visually-hidden(
+            type="radio",
+            name=inputName,
+            id=inputId
+          )
+          label.dot-pagination__button(for=inputId)

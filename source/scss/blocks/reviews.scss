@@ -1,0 +1,14 @@
+.reviews {
+  margin-bottom: 57px;
+}
+
+.reviews__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include content-font(17px, normal, 700);
+}
+

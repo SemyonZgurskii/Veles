@@ -1,0 +1,35 @@
+.big-news-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 288px;
+  min-height: 334px;
+  padding: 0 15px 20px;
+  margin-bottom: 25px;
+}
+
+.big-news-card__image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 288px;
+
+  transform: translateX(-50%);
+}
+
+.big-news-card__title {
+  margin-bottom: 14px;
+
+  @include titles-font(20px, normal, 900);
+}
+
+.big-news-card__description {
+  margin: 0;
+
+  white-space: pre-wrap;
+
+  @include content-font(14px, 150%, 400);
+}

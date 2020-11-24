@@ -1,0 +1,93 @@
+.events__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  margin: 0;
+
+  list-style: none;
+}
+//TODO: сделать вариант с темным названием карточки
+.events__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 288px;
+  height: 310px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.events__card-image {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.event__card-title {
+  max-width: 200px;
+  margin-bottom: 123px;
+
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include titles-font(20px, 150%, 900);
+
+  &--dark {
+    color: $black;
+  }
+}
+
+.event__card-link {
+  position: relative;
+  display: block;
+  padding-left: 28px;
+  padding-right: 57px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+
+  color: $white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background-color: rgba($black, 0.7);
+  border: 2px solid #ff9a64;
+
+  @include content-font(12px, normal, 600);
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    right: 33px;
+    top: 47%;
+    width: 14px;
+    height: 2px;
+
+    background-color: $white;
+  }
+
+  &::after {
+    right: 33px;
+    top: 34%;
+    width: 10px;
+    height: 10px;
+
+    border-right: 2px solid $white;
+    border-bottom: 2px solid $white;
+
+    transform: rotate(-45deg);
+  }
+}

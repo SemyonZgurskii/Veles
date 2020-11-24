@@ -1,0 +1,11 @@
+mixin Events(data)
+  section.events
+    h2.visually-hidden события
+    ul.events__list
+      each eventData in data
+        - const {title, imageUrl, isLight} = eventData;
+        - const titleModifier = isLight ? "event__card-title--dark" : "";
+        li.events__item
+          img.events__card-image(src=imageUrl, width="288", height="310")
+          h3.event__card-title(class=titleModifier)= title
+          a.event__card-link  смотреть

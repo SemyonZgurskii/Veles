@@ -1,0 +1,21 @@
+@mixin content-font($size, $height, $weight) {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin titles-font($size, $height, $weight) {
+  font-family: "Playfair display", "Times New Roman", serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin additional-font($size, $height, $weight) {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+

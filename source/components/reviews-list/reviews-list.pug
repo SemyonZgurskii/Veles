@@ -1,0 +1,9 @@
+mixin ReviewsList(data)
+  ul.reviews-list(class!=attributes.class)
+    each review in data
+      - const {title, preview, imageUrl} = review;
+      li.reviews-list__card
+        a.reviews-list__link
+          img.reviews-list__card-image(src=imageUrl, width="288", height="203")
+          h3.reviews-list__card-title= title
+          p.reviews-list__card-preview= preview

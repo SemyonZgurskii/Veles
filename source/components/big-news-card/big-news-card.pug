@@ -1,0 +1,6 @@
+mixin BigNewsCard(data)
+  - const {title, preview, imageUrl} = data;
+  div.big-news-card(class!=attributes.class)
+    img.big-news-card__image(src=imageUrl)
+    h3.big-news-card__title= title
+    p.big-news-card__description= preview

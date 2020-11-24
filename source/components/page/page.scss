@@ -1,0 +1,17 @@
+.page {
+  position: relative;
+  margin: 0;
+  padding-top: 36px;
+
+  @include content-font(14px, 150%, 400);
+}
+
+.page__title {
+  max-width: 200px;
+  margin: 0 auto 26px;
+
+  text-align: center;
+  letter-spacing: 1px;
+
+  @include titles-font(25px, 40px, 900);
+}

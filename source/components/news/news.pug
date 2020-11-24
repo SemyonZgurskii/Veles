@@ -1,0 +1,8 @@
+include ../big-news-card/big-news-card
+
+mixin News(data)
+  - const {title} = data;
+  section.news
+    h2.news__title= title
+    +BigNewsCard(bigNewsCardData)
+    ul.news__list

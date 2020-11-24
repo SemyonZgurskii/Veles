@@ -1,0 +1,16 @@
+mixin Slider(data)
+  - const {controlsCount, status, title, buttonBackText, buttonNextText, description} = data;
+  section.slider(class!=attributes.class)
+    img.slider__image(src=imageUrl)
+    strong.slider__status= status
+    h2.slider__title= title
+    div.slider__desktop-controls
+      button.slider__button-back= buttonBackText
+      button.slider__arrow-button-back
+      button.slider__arrow-button-next
+      button.slider__button-next= buttonNextText
+    p.slider__description= description
+    ul.slider__mobile-controls
+      - for (let i = 0; i < controlsCount; i++)
+          li.slider__mobile-control
+            input.slider__mobile-radio(type="radio", name="mobile-slide")

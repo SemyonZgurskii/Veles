@@ -1,0 +1,21 @@
+.news {
+  padding-top: 38px;
+  margin-bottom: 50px;
+}
+
+.news__title {
+  margin-bottom: 17px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include content-font(17px, 100%, 900);
+}
+
+@media (min-width: $pre-tablet-width) {
+  .news__content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,31 @@
+.reviews-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 37px;
+}
+
+.reviews-list__link {
+  display: block;
+}
+
+.reviews-list__card:not(:last-child) {
+  margin-bottom: 31px;
+}
+
+.reviews-list__card-image {
+  margin-bottom: 9px;
+}
+
+.reviews-list__card-title {
+  padding-left: 2px;
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  @include titles-font(23px, normal, 900);
+}
+
+.reviews-list__card-preview {
+  margin: 0;
+
+  @include content-font(14px, 150%, 400);
+}
