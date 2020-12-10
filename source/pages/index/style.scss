@@ -3,6 +3,8 @@
 @import '../../scss/mixins.scss';
 @import '../../scss/globals.scss';
 
+@import '../../scss/blocks/dot-pagination.scss';
+
 @import '../../components/page/page.scss';
 @import '../../components/main-content/main-content.scss';
 @import '../../components/main-header/main-header.scss';
@@ -16,6 +18,6 @@
 @import '../../scss/blocks/pagination.scss';
 @import '../../scss/blocks/article-card.scss';
 @import '../../scss/blocks/articles.scss';
-@import '../../scss/blocks/dot-pagination.scss';
 @import '../../scss/blocks/content.scss';
 @import '../../scss/blocks/events.scss';
+@import '../../scss/blocks/main-footer.scss';

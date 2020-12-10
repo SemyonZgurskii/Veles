@@ -12,3 +12,14 @@
   @include content-font(17px, normal, 700);
 }
 
+@media (min-width: $pre-tablet-width) {
+  .reviews__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $pre-desktop-width) {
+  .reviews__title {
+    margin-bottom: 15px;
+  }
+}

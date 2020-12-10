@@ -1,11 +1,22 @@
 mixin Events(data)
-  section.events
+  section.events(class!=attributes.class)
     h2.visually-hidden события
     ul.events__list
       each eventData in data
-        - const {title, imageUrl, isLight} = eventData;
-        - const titleModifier = isLight ? "event__card-title--dark" : "";
+        - const {title, images, isLight} = eventData;
+        - const {mobile1x, mobile2x, desktop1x, desktop2x} = images;
+        - const titleModifier = isLight ? "events__card-title--dark" : "";
         li.events__item
-          img.events__card-image(src=imageUrl, width="288", height="310")
-          h3.event__card-title(class=titleModifier)= title
-          a.event__card-link  смотреть
+          picture
+            source(
+              media="(min-width: 1024px)"
+              srcset=`${desktop1x}, ${desktop2x} 2x`
+            )
+            img.events__card-image(
+              src=mobile1x,
+              srcset=`${mobile2x} 2x`
+              width="100%",
+              height="auto"
+            )
+          h3.events__card-title(class=titleModifier)= title
+          a.events__card-link(href="#")  смотреть

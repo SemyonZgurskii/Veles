@@ -15,3 +15,20 @@
 
   @include titles-font(25px, 40px, 900);
 }
+
+@media (min-width: $pre-tablet-width) {
+  .page__title {
+    max-width: none;
+
+    font-size: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__title {
+    padding-top: 28px;
+    margin-bottom: 16px;
+
+    font-size: 35px;
+  }
+}

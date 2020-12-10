@@ -3,18 +3,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   width: 288px;
   height: 146px;
-  padding-top: 40px;
+  padding-bottom: 40px;
+
+  overflow: hidden;
 
   &--big {
+    width: 320px;
+    height: 176px;
     padding-top: 44px;
+    margin: 0 auto;
   }
-}
-
-.article-card.article-card--big {
-  width: 320px;
-  height: 176px;
 }
 
 .article-card__image {
@@ -33,12 +34,13 @@
   color: $white;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 
   @include content-font(16px, normal, 600);
 }
 
 .article-card__link {
-  padding: 9px 18px;
+  padding: 9px 19px;
 
   border: 1px solid $white;
   background-color: rgba(#000000, 0.3);
@@ -46,8 +48,18 @@
   color: $white;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
 
   @include content-font(10px, normal, 600);
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.3);
+  }
+
+  &:active {
+    border: 1px solid $orange;
+  }
 }
 
 .article-card--big > .article-card__title {
@@ -65,7 +77,18 @@
   padding-right: 55px;
 
   font-size: 12px;
-  border: 2px solid #ff9a64;
+  border: 2px solid $dark-orange;
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+    border: 2px solid $orange;
+  }
+
+  &:active {
+    background-color: desaturate($orange, 30%);
+    border: 2px solid desaturate($orange, 30%);
+  }
 
   &::before,
   &::after {
@@ -94,4 +117,74 @@
 
     transform: rotate(-45deg);
   }
+}
+
+@media (min-width: $pre-desktop-width) {
+  .article-card {
+    &--big {
+      width: 766px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .article-card {
+    position: relative;
+    width: 270px;
+    height: 136px;
+    padding-bottom: 28px;
+
+    &::before,
+    &::after {
+      @include pseudo-element-base(100%, 14px);
+
+      left: 0;
+
+      background-color: $white;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+
+    &:hover::before,
+    &:hover::after,
+    &:focus-within::after,
+    &:focus-within::before {
+      background-color: transparent;
+    }
+
+    &--big {
+      width: 766px;
+      height: 176px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .article-card__title,
+  .article-card__link {
+    opacity: 0;
+  }
+
+  .article-card--big > .article-card__title,
+  .article-card--big > .article-card__link {
+    opacity: 1;
+  }
+
+  .article-card:hover > .article-card__title,
+  .article-card:hover > .article-card__link,
+  .article-card:focus-within > .article-card__title,
+  .article-card:focus-within > .article-card__link {
+    opacity: 1;
+  }
+
 }

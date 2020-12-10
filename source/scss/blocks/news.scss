@@ -18,4 +18,25 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .news__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $pre-desktop-width) {
+  .news__main {
+    margin-right: 29px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news {
+    padding-top: 0;
+  }
+
+  .news__title {
+    margin-top: 2px;
+    margin-bottom: 16px;
+  }
 }

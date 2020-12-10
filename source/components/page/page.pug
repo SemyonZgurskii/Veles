@@ -16,6 +16,8 @@ block variables
 
 block links
   link(rel="stylesheet", href="style.css")
+  link(rel="preconnect" href="https://fonts.gstatic.com")
+  link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet")
 
 block header
   header.main-header.main-header--menu-closed
@@ -24,7 +26,17 @@ block header
 block content
   main.main-content
     section.slider
-      img.slider__image(src="../images/slider-mobile.jpg")
+      picture
+        source(
+          media="(min-width: 400px)"
+          srcset="../images/slider-desktop.jpg, ../images/slider-desktop-2x.jpg 2x"
+        )
+        img.slider__image(
+            height="100%"
+            src="../images/slider-mobile.jpg"
+            srcset="../images/slider-mobile-2x.jpg 2x"
+            alt="главный слайдер"
+          )
       strong.slider__status= "новое"
       h2.slider__title= "подводный отель"
       div.slider__desktop-controls
@@ -32,8 +44,11 @@ block content
         button.slider__arrow-button-back
         button.slider__arrow-button-next
         button.slider__button-next= "Следущая"
-      p.slider__description= "Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти"
-      +DotPagination(sliderPaginationData, "white")
+      p.slider__description
+        |Как известно, Дубай – город контрастов. Самые революционные
+        br
+        |&#32;и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти
+      +DotPagination(sliderPaginationData, "white")(class="slider__pagination")
     div.content
       div.content__left-column
         section.news.container
@@ -49,10 +64,18 @@ block content
           h2.visually-hidden статьи
           div.articles__main-article
             +ArticleCard(articlesMainCard, "big")
-          ul.articles__list
-            each articleCardData in articleCardsData
-              li.articles__item
-                +ArticleCard(articleCardData)
-          +DotPagination(reviewsPaginationData)
+          div.articles__wrapper.container
+            button.articles__button-back
+            button.articles__button-next
+            ul.articles__list
+              each articleCardData in articleCardsData
+                li.articles__item
+                  +ArticleCard(articleCardData)
+            +DotPagination(reviewsPaginationData)(class="articles__mobile-pagination")
       div.content__right-column
-        +Events(eventsData)
+        +Events(eventsData)(class="container")
+  foooter.main-footer
+    h2.main-footer__title Новости культуры
+    +SiteNavigation(siteNavigationData)(class="main-footer__navigation")
+    div.main-footer__copyright-wrapper
+      p.main-footer__copyright © 2018 Новости культуры. Все права защищены.

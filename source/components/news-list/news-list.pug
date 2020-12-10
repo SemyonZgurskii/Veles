@@ -4,8 +4,9 @@ mixin NewsList(data)
     each card in cards
       - const {title, description, imageUrl} = card;
       li.news-list__item
-        a.news-list__link
-          img.news-list__image(src=imageUrl)
+        a.news-list__link(href="#")
+          div.news-list__image-wrapper
+            img.news-list__image(src=imageUrl, width="127", height="91")
           div.news-list__text-wrapper
             h3.news-list__title= title
             p.news-list__description= description

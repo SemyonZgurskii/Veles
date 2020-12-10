@@ -5,7 +5,6 @@
 
 .pagination__list {
   display: flex;
-  flex-grow: 1;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
@@ -49,6 +48,7 @@
 
 .pagination__item:not(:last-child) {
   padding-left: 6px;
+  margin-right: 17px;
 }
 
 .pagination__page-link {
@@ -57,8 +57,46 @@
   height: 25px;
   padding-top: 4px;
 
+  text-decoration: none;
   text-align: center;
   letter-spacing: 2px;
 
   @include additional-font(18px, 100%, 400);
+}
+
+@media (min-width: $pre-desktop-width) {
+  .pagination__list {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .pagination__page-link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination__button-back,
+  .pagination__button-forward {
+    &:after {
+      @include pseudo-element-base(2px, 27px);
+
+      top: -1px;
+
+      background-color: rgba($black, 0.3);
+
+    }
+  }
+
+  .pagination__button-forward {
+    &:after {
+      right: 37px;
+    }
+  }
+
+  .pagination__button-back {
+    &:after {
+      left: 37px;
+    }
+  }
 }

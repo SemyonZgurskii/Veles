@@ -5,5 +5,5 @@ mixin Pagination(data)
     ul.pagination__list
       each pageNumber in pagesNumbers
         li.pagination__item
-            a.pagination__page-link= pageNumber
+            a.pagination__page-link(href="#")= pageNumber
     button.pagination__button-forward

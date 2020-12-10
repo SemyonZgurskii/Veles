@@ -1,9 +1,27 @@
 mixin ArticleCard(data, size)
-  - const {title, imageUrl} = data;
-  - const imgWidth = size === "big" ? "320" : "288";
-  - const imgHeight = size === "big" ? "176" : "146";
+  - const {title, images} = data;
   - const modifier = size === "big" ? "article-card--big" : "";
   div.article-card(class=modifier)
-    img.article-card__image(src=imageUrl, width=imgWidth, height=imgHeight)
+    if size === "big"
+      - const {mobile1x, mobile2x, desktop1x, desktop2x} = images;
+      picture
+        source(
+          media="(min-width: 1024px)"
+          srcset=`${desktop1x}, ${desktop2x} 2x`
+        )
+        img.article-card__image(
+          src=mobile1x,
+          srcset=`${mobile2x} 2x`
+          width="100%",
+          height="auto"
+        )
+    else
+      - const {desktop1x, desktop2x} = images;
+      img.article-card__image(
+        source=`${desktop2x} 2x`
+        src=desktop1x,
+        width="100%",
+        height="auto"
+      )
     h3.article-card__title= title
-    a.article-card__link смотреть
+    a.article-card__link(href="#") смотреть

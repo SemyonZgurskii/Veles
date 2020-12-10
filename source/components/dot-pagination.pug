@@ -1,7 +1,7 @@
 mixin DotPagination(data, color)
   - const modifier = color === "white" ? "dot-pagination--white" : "";
   - const {dotsCount, inputName} = data;
-  ul.dot-pagination(class=modifier)
+  ul.dot-pagination(class=modifier)(class!=attributes.class)
     - for(let i = 0; i < dotsCount; i++)
         - const inputId = inputName + "-" + (i + 1);
         li.dot-pagination__item

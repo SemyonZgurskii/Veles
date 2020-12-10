@@ -14,11 +14,10 @@
   content: "";
   display: block;
   top: 50%;
-  width: 100%;
-  height: auto;
+  left: 50%;
 
   z-index: -1;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .slider__status {
@@ -60,6 +59,10 @@
   @include content-font(14px, 150% , 400);
 }
 
+.slider__description > br {
+  display: none;
+}
+
 .slider__mobile-controls {
   display: flex;
   margin: 0;
@@ -70,4 +73,124 @@
 
 .slider__mobile-control {
   margin-right: 4px;
+}
+
+@media (max-width: $base-mobile-width-only) {
+  .slider {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    width: 1440px;
+    padding: 63px 20px 17px;
+    margin: 0 auto 49px;
+  }
+
+  .slider__status {
+    margin-bottom: 32px;
+  }
+
+  .slider__title {
+    max-width: none;
+    margin-bottom: 26px;
+
+    font-size: 72px;
+    letter-spacing: 1px;
+  }
+
+  .slider__desktop-controls {
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    height: 59px;
+    margin-bottom: 36px;
+
+    &::before {
+      @include pseudo-element-base(1px, 42px);
+
+      left: 50%;
+
+      background-color: $white;
+    }
+  }
+
+  .slider__button-back,
+  .slider__button-next{
+    position: relative;
+
+    background-color: transparent;
+    border: none;
+
+    color: $white;
+    @include content-font(13px, normal, 400);
+
+    &::before {
+      @include pseudo-element-base(64px, 1px);
+      background-color: $white;
+    }
+  }
+
+  .slider__button-back {
+    padding-right: 70px;
+
+    text-align: left;
+
+    &::before {
+      right: 0;
+      top: 50%;
+    }
+  }
+
+  .slider__button-next {
+    padding-left: 70px;
+    margin-left: 16px;
+
+    text-align: right;
+
+    &::before {
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  .slider__arrow-button-back,
+  .slider__arrow-button-next {
+    width: 27px;
+    height: 37px;
+
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/main-slider-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider__arrow-button-next {
+    margin-right: auto;
+
+    transform: rotate(180deg);
+  }
+
+  .slider__arrow-button-back {
+    margin-right: 32px;
+    margin-left: auto;
+  }
+
+  .slider__description {
+    max-width: 460px;
+
+    line-height: 158%;
+  }
+
+  .slider__description > br {
+    display: inline;
+  }
+
+  .slider__pagination {
+    display: none;
+  }
 }

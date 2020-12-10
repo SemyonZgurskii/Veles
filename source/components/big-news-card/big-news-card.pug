@@ -1,6 +1,18 @@
 mixin BigNewsCard(data)
-  - const {title, preview, imageUrl} = data;
-  div.big-news-card(class!=attributes.class)
-    img.big-news-card__image(src=imageUrl)
-    h3.big-news-card__title= title
-    p.big-news-card__description= preview
+  - const {title, preview, images} = data;
+  - const {mobile1x, mobile2x, desktop1x, desktop2x} = images;
+  a.big-news-card__link(href="#")(class!=attributes.class)
+    div.big-news-card
+      picture
+        source(
+          media="(min-width: 1024px)"
+          srcset=`${desktop1x} , ${desktop2x} 2x`
+        )
+        img.big-news-card__image(
+          width="auto"
+          height="334"
+          src=mobile1x
+          srcset=mobile2x + " 2x"
+        )
+      h3.big-news-card__title= title
+      p.big-news-card__description= preview

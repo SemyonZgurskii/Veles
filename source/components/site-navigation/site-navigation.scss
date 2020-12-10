@@ -20,11 +20,21 @@
   padding: 19px 16px;
 
   color: $dark-gray;
+  text-decoration: none;
   text-transform: uppercase;
   background-color: $light-gray;
   letter-spacing: 0.1em;
 
   @include content-font(16px, normal, 400);
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    color: desaturate($orange, 30%);
+  }
 
   &::before {
     position: absolute;
@@ -38,5 +48,41 @@
     border-right: 2px solid rgba($dark-gray, 0.5);
     border-bottom: 2px solid rgba($dark-gray, 0.5);
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $pre-tablet-width) {
+  .site-navigation__link {
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1440px;
+    padding-left: 119px;
+    padding-right: 114px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .site-navigation__item {
+    margin-bottom: 5px;
+  }
+
+  .site-navigation__link{
+    font-size: 15px;
+    letter-spacing: 2px;
+    background-color: transparent;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .site-navigation__link:not(:last-child) {
+    margin-right: 10px;
   }
 }
