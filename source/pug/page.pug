@@ -1,18 +1,18 @@
-extends ../../templates/index-page
+extends ../templates/index-page
 
 block variables
   - const PAGE_TITLE = "Новости культуры";
 
-  include ../../mock
+  include ../mock
 
-  include ../site-navigation/site-navigation
-  include ../news/news
-  include ../news-list/news-list
-  include ../reviews-list/reviews-list
-  include ../pagination
-  include ../article-card
-  include ../dot-pagination
-  include ../events
+  include site-navigation
+  include news
+  include news-list
+  include reviews-list
+  include pagination
+  include article-card
+  include dot-pagination
+  include events
 
 block links
   link(rel="stylesheet", href="style.css")

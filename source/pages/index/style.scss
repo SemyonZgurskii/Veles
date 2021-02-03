@@ -5,11 +5,11 @@
 
 @import '../../scss/blocks/dot-pagination.scss';
 
-@import '../../components/page/page.scss';
-@import '../../components/main-content/main-content.scss';
-@import '../../components/main-header/main-header.scss';
-@import '../../components/site-navigation/site-navigation.scss';
-@import '../../components/slider/slider.scss';
+@import '../../scss/blocks/page';
+@import '../../scss/blocks/main-content';
+@import '../../scss/blocks/main-header';
+@import '../../scss/blocks/site-navigation';
+@import '../../scss/blocks/slider';
 @import '../../scss/blocks/news.scss';
 @import '../../scss/blocks/big-news-card.scss';
 @import '../../scss/blocks/news-list.scss';
