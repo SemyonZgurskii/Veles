@@ -57,6 +57,7 @@
   height: 25px;
   padding-top: 4px;
 
+  color: $dark-gray;
   text-decoration: none;
   text-align: center;
   letter-spacing: 2px;
@@ -68,10 +69,6 @@
   .pagination__list {
     margin-left: 45px;
     margin-right: 45px;
-  }
-
-  .pagination__page-link {
-    font-size: 14px;
   }
 }
 
