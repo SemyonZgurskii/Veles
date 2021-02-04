@@ -20,7 +20,7 @@ block links
   link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet")
 
 block header
-  header.main-header.main-header--menu-closed
+  header.main-header.main-header--menu-opened.main-header--no-js
     button.main-header__menu-button(type="button")
     +SiteNavigation(siteNavigationData)(class="main-header__navigation")
 block content
@@ -79,3 +79,5 @@ block content
     +SiteNavigation(siteNavigationData)(class="main-footer__navigation")
     div.main-footer__copyright-wrapper
       p.main-footer__copyright © 2018 Новости культуры. Все права защищены.
+  script(src="main.js")
+

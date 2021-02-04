@@ -78,6 +78,14 @@
   background-color: transparent;
 }
 
+.main-header.main-header--no-js {
+  position: relative;
+}
+
+.main-header--no-js .main-header__menu-button {
+  display: none;
+}
+
 
 @media (min-width: $pre-tablet-width) {
   .main-header--menu-closed .main-header__menu-button {
