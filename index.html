@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&amp;display=swap" rel="stylesheet">
+    <title>Veles</title>
+  </head>
+  <body class="page">
+    <h1 class="page__title">Новости культуры</h1>
+    <header class="main-header main-header--menu-opened main-header--no-js">
+      <button class="main-header__menu-button" type="button"></button>
+      <nav class="site-navigation main-header__navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">новости</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">обзоры</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">музыка</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">архитектура</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">кино</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">театр</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">литература</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">религия</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">живопись</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="slider">
+        <picture>
+          <source media="(min-width: 400px)" srcset="../images/slider-desktop.jpg, ../images/slider-desktop-2x.jpg 2x"><img class="slider__image" height="100%" src="../images/slider-mobile.jpg" srcset="../images/slider-mobile-2x.jpg 2x" alt="главный слайдер">
+        </picture><strong class="slider__status">новое</strong>
+        <h2 class="slider__title">подводный отель</h2>
+        <div class="slider__desktop-controls">
+          <button class="slider__button-back">Предыдущая</button>
+          <button class="slider__arrow-button-back"></button>
+          <button class="slider__arrow-button-next"></button>
+          <button class="slider__button-next">Следущая</button>
+        </div>
+        <p class="slider__description">Как известно, Дубай – город контрастов. Самые революционные<br>&#32;и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</p>
+        <ul class="dot-pagination dot-pagination--white slider__pagination">
+          <li class="dot-pagination__item">
+            <input class="dot-pagination__input visually-hidden" type="radio" name="slider-pagination" id="slider-pagination-1"/>
+            <label class="dot-pagination__button" for="slider-pagination-1"></label>
+          </li>
+          <li class="dot-pagination__item">
+            <input class="dot-pagination__input visually-hidden" type="radio" name="slider-pagination" id="slider-pagination-2"/>
+            <label class="dot-pagination__button" for="slider-pagination-2"></label>
+          </li>
+          <li class="dot-pagination__item">
+            <input class="dot-pagination__input visually-hidden" type="radio" name="slider-pagination" id="slider-pagination-3"/>
+            <label class="dot-pagination__button" for="slider-pagination-3"></label>
+          </li>
+          <li class="dot-pagination__item">
+            <input class="dot-pagination__input visually-hidden" type="radio" name="slider-pagination" id="slider-pagination-4"/>
+            <label class="dot-pagination__button" for="slider-pagination-4"></label>
+          </li>
+          <li class="dot-pagination__item">
+            <input class="dot-pagination__input visually-hidden" type="radio" name="slider-pagination" id="slider-pagination-5"/>
+            <label class="dot-pagination__button" for="slider-pagination-5"></label>
+          </li>
+        </ul>
+      </section>
+      <div class="content">
+        <div class="content__left-column">
+          <section class="news container">
+            <h2 class="news__title">новости</h2>
+            <div class="news__content-wrapper"><a class="big-news-card__link news__main" href="#">
+                <div class="big-news-card">
+                  <picture>
+                    <source media="(min-width: 1024px)" srcset="images/big-news-photo-desktop.jpg , images/big-news-photo-desktop-2x.jpg 2x"/><img class="big-news-card__image" width="auto" height="334" src="images/big-news-photo-mobile.jpg" srcset="images/big-news-photo-mobile-2x.jpg 2x"/>
+                  </picture>
+                  <h3 class="big-news-card__title">Новости культуры России и всего мира</h3>
+                  <p class="big-news-card__description">В минувшие выходные в Москве на фестивале «Оберег»
+вручили первую премию Russian World Music Awards</p>
+                </div></a>
+              <ul class="news-list">
+                <li class="news-list__item"><a class="news-list__link" href="#">
+                    <div class="news-list__image-wrapper"><img class="news-list__image" src="images/news-card-image-mobile-1.jpg" width="127" height="91"/></div>
+                    <div class="news-list__text-wrapper">
+                      <h3 class="news-list__title">Открытие нового памятника Евгению Леонову</h3>
+                      <p class="news-list__description">10 сентября в 15:00 был открыт памятник писателю</p>
+                    </div></a></li>
+                <li class="news-list__item"><a class="news-list__link" href="#">
+                    <div class="news-list__image-wrapper"><img class="news-list__image" src="images/news-card-image-mobile-2.jpg" width="127" height="91"/></div>
+                    <div class="news-list__text-wrapper">
+                      <h3 class="news-list__title">Беседы с писателями</h3>
+                      <p class="news-list__description">Русские писатели говорят о важности искусства</p>
+                    </div></a></li>
+                <li class="news-list__item"><a class="news-list__link" href="#">
+                    <div class="news-list__image-wrapper"><img class="news-list__image" src="images/news-card-image-mobile-3.jpg" width="127" height="91"/></div>
+                    <div class="news-list__text-wrapper">
+                      <h3 class="news-list__title">День и ночь св. Патрика: встреча старых друзей</h3>
+                      <p class="news-list__description">Не Джойсом единым живет Ирландия!</p>
+                    </div></a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="reviews container">
+            <h2 class="reviews__title">обзоры</h2>
+            <ul class="reviews-list reviews__item">
+              <li class="reviews-list__card"><a class="reviews-list__link" href="#">
+                  <div class="reviews-list__image-mask">
+                    <picture>
+                      <source media="(min-width: 1024px)" srcset="images/review-photo-1-desktop.jpg, images/review-photo-1-desktop-2x.jpg 2x"/><img class="reviews-list__card-image" width="100%" height="auto" src="images/review-photo-1-mobile.jpg" srcset="images/review-photo-1-mobile-2x.jpg 2x"/>
+                    </picture>
+                  </div>
+                  <h3 class="reviews-list__card-title">«Шальные годы» Монпарнаса</h3>
+                  <p class="reviews-list__card-preview">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября проходит выставка «Шальные годы Монпарнаса»</p></a></li>
+              <li class="reviews-list__card"><a class="reviews-list__link" href="#">
+                  <div class="reviews-list__image-mask">
+                    <picture>
+                      <source media="(min-width: 1024px)" srcset="images/review-photo-2-desktop.jpg, images/review-photo-2-desktop-2x.jpg 2x"/><img class="reviews-list__card-image" width="100%" height="auto" src="images/review-photo-2-mobile.jpg" srcset="images/review-photo-2-mobile-2x.jpg 2x"/>
+                    </picture>
+                  </div>
+                  <h3 class="reviews-list__card-title">Анатомия за 30 секунд</h3>
+                  <p class="reviews-list__card-preview">Сейчас, когда мир открыт нараспашку для человека и его познавательных изысканий, интерес к научно-популярной литературе заметно вырос</p></a></li>
+              <li class="reviews-list__card"><a class="reviews-list__link" href="#">
+                  <div class="reviews-list__image-mask">
+                    <picture>
+                      <source media="(min-width: 1024px)" srcset="images/review-photo-3-desktop.jpg, images/review-photo-3-desktop-2x.jpg 2x"/><img class="reviews-list__card-image" width="100%" height="auto" src="images/review-photo-3-mobile.jpg" srcset="images/review-photo-3-mobile-2x.jpg 2x"/>
+                    </picture>
+                  </div>
+                  <h3 class="reviews-list__card-title">Русские балетные сезоны</h3>
+                  <p class="reviews-list__card-preview">В Новом Иерусалиме стартовал необычный культурно-развлекательный спектакль, который покажут в новом театре</p></a></li>
+              <li class="reviews-list__card"><a class="reviews-list__link" href="#">
+                  <div class="reviews-list__image-mask">
+                    <picture>
+                      <source media="(min-width: 1024px)" srcset="images/review-photo-4-desktop.jpg, images/review-photo-4-desktop-2x.jpg 2x"/><img class="reviews-list__card-image" width="100%" height="auto" src="images/review-photo-4-mobile.jpg" srcset="images/review-photo-4-mobile-2x.jpg 2x"/>
+                    </picture>
+                  </div>
+                  <h3 class="reviews-list__card-title">Сферические чудаки</h3>
+                  <p class="reviews-list__card-preview">Корреспондентам «Культурного обозревателя» посчастливилось побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды»</p></a></li>
+            </ul>
+            <div class="pagination reviews__pagination">
+              <button class="pagination__button-back"></button>
+              <ul class="pagination__list">
+                <li class="pagination__item"><a class="pagination__page-link" href="#">1</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">2</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">3</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">…</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">11</a></li>
+              </ul>
+              <button class="pagination__button-forward"></button>
+            </div>
+          </section>
+          <section class="articles">
+            <h2 class="visually-hidden">статьи</h2>
+            <div class="articles__main-article">
+              <div class="article-card article-card--big">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="images/article-photo-big-desktop.jpg, images/article-photo-big-desktop-2x.jpg 2x"/><img class="article-card__image" src="images/article-photo-big-mobile.jpg" srcset="images/article-photo-big-mobile-2x.jpg 2x" width="100%" height="auto"/>
+                </picture>
+                <h3 class="article-card__title">ох уж этот балет</h3><a class="article-card__link" href="#">смотреть</a>
+              </div>
+            </div>
+            <div class="articles__wrapper container">
+              <button class="articles__button-back"></button>
+              <button class="articles__button-next"></button>
+              <ul class="articles__list">
+                <li class="articles__item">
+                  <div class="article-card"><img class="article-card__image" source="images/article-photo-1-desktop-2x.jpg 2x" src="images/article-photo-1-desktop.jpg" width="100%" height="auto"/>
+                    <h3 class="article-card__title">как все успевать</h3><a class="article-card__link" href="#">смотреть</a>
+                  </div>
+                </li>
+                <li class="articles__item">
+                  <div class="article-card"><img class="article-card__image" source="images/article-photo-2-desktop-2x.jpg 2x" src="images/article-photo-2-desktop.jpg" width="100%" height="auto"/>
+                    <h3 class="article-card__title">искусство путешевствовать</h3><a class="article-card__link" href="#">смотреть</a>
+                  </div>
+                </li>
+                <li class="articles__item">
+                  <div class="article-card"><img class="article-card__image" source="images/article-photo-3-desktop-2x.jpg 2x" src="images/article-photo-3-desktop.jpg" width="100%" height="auto"/>
+                    <h3 class="article-card__title">чем бы заняться</h3><a class="article-card__link" href="#">смотреть</a>
+                  </div>
+                </li>
+                <li class="articles__item">
+                  <div class="article-card"><img class="article-card__image" source="images/article-photo-4-desktop-2x.jpg 2x" src="images/article-photo-4-desktop.jpg" width="100%" height="auto"/>
+                    <h3 class="article-card__title">красота и опасность</h3><a class="article-card__link" href="#">смотреть</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="dot-pagination articles__mobile-pagination">
+                <li class="dot-pagination__item">
+                  <input class="dot-pagination__input visually-hidden" type="radio" name="review-pagination" id="review-pagination-1"/>
+                  <label class="dot-pagination__button" for="review-pagination-1"></label>
+                </li>
+                <li class="dot-pagination__item">
+                  <input class="dot-pagination__input visually-hidden" type="radio" name="review-pagination" id="review-pagination-2"/>
+                  <label class="dot-pagination__button" for="review-pagination-2"></label>
+                </li>
+                <li class="dot-pagination__item">
+                  <input class="dot-pagination__input visually-hidden" type="radio" name="review-pagination" id="review-pagination-3"/>
+                  <label class="dot-pagination__button" for="review-pagination-3"></label>
+                </li>
+                <li class="dot-pagination__item">
+                  <input class="dot-pagination__input visually-hidden" type="radio" name="review-pagination" id="review-pagination-4"/>
+                  <label class="dot-pagination__button" for="review-pagination-4"></label>
+                </li>
+                <li class="dot-pagination__item">
+                  <input class="dot-pagination__input visually-hidden" type="radio" name="review-pagination" id="review-pagination-5"/>
+                  <label class="dot-pagination__button" for="review-pagination-5"></label>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="content__right-column">
+          <section class="events container">
+            <h2 class="visually-hidden">события</h2>
+            <ul class="events__list">
+              <li class="events__item">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="images/event-photo-1-desktop.jpg, images/event-photo-1-desktop-2x.jpg 2x"/><img class="events__card-image" src="images/event-photo-1-mobile.jpg" srcset="images/event-photo-1-mobile-2x.jpg 2x" width="100%" height="auto"/>
+                </picture>
+                <h3 class="events__card-title events__card-title--dark">воздушные шары</h3><a class="events__card-link" href="#"> смотреть</a>
+              </li>
+              <li class="events__item">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="images/event-photo-2-desktop.jpg, images/event-photo-2-desktop-2x.jpg 2x"/><img class="events__card-image" src="images/event-photo-2-mobile.jpg" srcset="images/event-photo-2-mobile-2x.jpg 2x" width="100%" height="auto"/>
+                </picture>
+                <h3 class="events__card-title">необычная фотосессия</h3><a class="events__card-link" href="#"> смотреть</a>
+              </li>
+              <li class="events__item">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="images/event-photo-3-desktop.jpg, images/event-photo-3-desktop-2x.jpg 2x"/><img class="events__card-image" src="images/event-photo-3-mobile.jpg" srcset="images/event-photo-3-mobile-2x.jpg 2x" width="100%" height="auto"/>
+                </picture>
+                <h3 class="events__card-title">вытсавка птиц</h3><a class="events__card-link" href="#"> смотреть</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    <foooter class="main-footer">
+      <h2 class="main-footer__title">Новости культуры</h2>
+      <nav class="site-navigation main-footer__navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">новости</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">обзоры</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">музыка</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">архитектура</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">кино</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">театр</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">литература</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">религия</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">живопись</a></li>
+        </ul>
+      </nav>
+      <div class="main-footer__copyright-wrapper">
+        <p class="main-footer__copyright">© 2018 Новости культуры. Все права защищены.</p>
+      </div>
+    </foooter>
+    <script src="main.js"></script>
+  </body>
+</html>
