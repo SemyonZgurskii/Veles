@@ -58,6 +58,8 @@ function clean() {
   return del("public");
 }
 
+exports.build = gulp.series(clean, copy, html, styles);
+
 exports.default = gulp.series(
   clean, copy, html, styles, server, watcher
 );
